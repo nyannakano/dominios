@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  dominios-back:
+    build:
+      context: ./dominios-back
+    container_name: dominios-back
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./dominios-back:/var/www
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: laravel
+      DB_USERNAME: root
+      DB_PASSWORD: secret
+
+  dominios-front:
+    build:
+      context: ./dominios-front
+    container_name: dominios-front
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dominios-front:/app
+    working_dir: /app
+    depends_on:
+      - dominios-back
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: laravel
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
