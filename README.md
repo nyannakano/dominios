@@ -1,6 +1,6 @@
 - Faça o git clone deste repositório
 - Entre na pasta dominios-back e copie o arquivo .env.example para .env
-- Rode o comando
+- Retorne a pasta raíz e rode o comando:
 
 ```
 docker-compose up --build
