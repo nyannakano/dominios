@@ -24,6 +24,13 @@ chmod -R 775 storage bootstrap/cache
 
 Acesse via o link: http://localhost:3000
 
+O login e senha que está no seeder é:
+
+```
+admin@admin.com
+admin
+```
+
 ## Referente a decisões no projeto
 
 Neste projeto utilizei a arquitetura MVC padrão do Laravel com o adicional de uma camada de Services. A controller é responsável pelas requisições e respostas Http, enquanto os Services ficam responsáveis por toda a lógica do código.
