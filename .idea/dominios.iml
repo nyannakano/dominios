@@ -120,6 +120,12 @@
       <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/laravel/pail" />
+      <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/laravel/telescope" />
+      <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/league/uri" />
+      <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/league/uri-interfaces" />
+      <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/staabm/side-effects-detector" />
+      <excludeFolder url="file://$MODULE_DIR$/dominios-back/vendor/symfony/clock" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
