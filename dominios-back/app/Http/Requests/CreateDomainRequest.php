@@ -25,7 +25,6 @@ class CreateDomainRequest extends FormRequest
             'name' => 'required|string|max:255',
             'domain' => 'required|string|max:255',
             'client' => 'required|string|max:255',
-            'active' => 'required|in:0,1',
             'expiration_date' => 'required|date',
             'observation' => 'nullable|string|max:1000'
         ];
@@ -37,8 +36,6 @@ class CreateDomainRequest extends FormRequest
             'name.required' => 'O nome é obrigatório.',
             'domain.required' => 'O domínio é obrigatório.',
             'client.required' => 'O cliente é obrigatório.',
-            'active.required' => 'O status é obrigatório.',
-            'active.in' => 'O status é obrigatório.',
             'expiration_date.required' => 'A data de expiração é obrigatória.',
             'observation.max' => 'A observação deve ter no máximo 1000 caracteres.',
             'name.max' => 'O nome deve ter no máximo 255 caracteres.',

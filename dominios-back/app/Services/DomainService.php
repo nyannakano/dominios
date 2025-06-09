@@ -3,11 +3,12 @@
 namespace App\Services;
 
 use App\Models\Domain;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Log;
 
 class DomainService
 {
-    public function getDomains()
+    public function getDomains(): Collection
     {
         return Domain::all();
     }
@@ -23,9 +24,10 @@ class DomainService
         }
     }
 
-    public function createDomain($request)
+    public function createDomain($request): array
     {
         try {
+
             $domain = Domain::create([
                 'name' => $request->name,
                 'domain' => $request->domain,
@@ -50,7 +52,7 @@ class DomainService
         }
     }
 
-    public function deleteDomain($id)
+    public function deleteDomain($id): array
     {
         $domain = Domain::find($id);
 
@@ -78,7 +80,7 @@ class DomainService
         }
     }
 
-    public function updateDomain($id, $request)
+    public function updateDomain($id, $request): array
     {
         $domain = Domain::find($id);
 
